@@ -28,14 +28,20 @@ const App = () => {
       <hr />
       <List list={stories} />
       <hr />
-      <Welcome text="Welcome to React" />
+      <Welcome text={{ greeting:'Welcome to React, actually i just love this wtf' }} />
+      <Meuprops text={{ props:'Agora sim aprendi a fazer props'}} />
       
     </div>
   );
 };
 
+const Meuprops = ({text}) => {
+  return  <p>{text.props} </p>
+}
+
 const Welcome = ({text}) => {
-  return <h1>{text}</h1>;
+  return <h1>{text.greeting}{ '  learn ola'}</h1>
+
 }
 const Search = () => {
   const handleChange = (event) => {
